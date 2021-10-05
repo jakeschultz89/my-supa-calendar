@@ -1,0 +1,49 @@
+.container-fluid{
+    display:flex;
+    width:90%;
+    justify-content:space-between;
+    padding:1rem;
+}
+
+#iImportant{
+    font-size:30px;
+    color:rgb(255, 208, 0);
+    cursor:pointer;
+}
+
+#iImportant:hover{
+    color:rgb(255, 187, 0);
+}
+form{
+    background-color:rgb(200,200,200,.5);
+    border-radius: 10px;
+    width:35vw;
+}
+form div{
+    padding:1rem;
+    
+}
+/*main */
+body{
+    height:100vh;
+    background-image: url('../img/10997406.jpg');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size:cover;
+}
+/*header*/
+header{
+    background-color:#413896;
+    color:white;
+}
+.container-fluid-header{
+    display:flex;
+    width:90%;
+    justify-content:space-between;
+    padding:1rem;
+}
+#btnAdd{
+    background-color:rgb(71, 1, 73);
+    border:none;
+}
+/*task*/

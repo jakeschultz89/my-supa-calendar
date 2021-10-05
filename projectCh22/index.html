@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/app.css">
+    <title>My Super Calendar</title>
+</head>
+<body>
+    <header>
+        <div class="container-fluid-header">
+            <h1>My Super Calendar</h1>
+            <button id="btnAdd" class="btn btn-danger">Add task</button>
+        </div>
+    </header>
+
+    <main class="container-fluid">
+        <section class="section-list">
+            <h3>Your pending tasks</h3>
+            <div class="pending-tasks">
+                <!--tasks here-->
+            </div>
+        </section>
+        <section class="section-form">
+            
+
+            <form>
+                <div>
+                    <label class="form-label">Title</label>
+                    <input id="txtTitle" type="text" class="form-input" />
+                </div>
+                <div>
+                    <label class="form-label">Important</label>
+                    <i id="iImportant" class="fas fa-star"></i>
+                </div>
+                <div>
+                    <label class="form-label">Due date</label>
+                    <input id="selDate" type="datetime-local" class="form-control" />
+                </div>
+                <div>
+                    <label class="form-label">Location</label>
+                    <input id="txtLocation" type="text" class="form-control" />
+                </div>
+                <div>
+                    <label class="form-label">Priority</label>
+                    <select id="selPriority" class="form-select">
+                        <option value="1">Low</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Important</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="form-label">Color</label>
+                    <input id="selColor" type="color" class="form-control">
+                </div>
+                <div>
+                    <label class="form-label">Collaborator</label>
+                    <input id="txtCollaborator" type="text" class="form-control">
+                </div>
+                <div> 
+                    <label class="form-label">Description</label>
+                    <textarea id="txtDescription" class="form-control"></textarea>
+                </div>
+                <button type="button" id="btnSave" class="btn btn-dark">Save Task</button>
+            </form>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/task.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/test.js"></script>
+</body>
+</html>
