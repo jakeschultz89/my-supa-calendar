@@ -10,6 +10,6 @@ class Task {
         this.collaborator=collaborator;
         this.description=description;
 
-        this.name="Samantha";
+        this.name="Jake";
     }
 }

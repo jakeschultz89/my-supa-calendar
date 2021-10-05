@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+*{
+    font-family: 'Sedgwick Ave', cursive;
+}
+.container-fluid{
+    display:flex;
+    width:90%;
+    justify-content:space-between;
+    padding:1rem;
+}
+
+#iImportant{
+    font-size:30px;
+    color:rgb(255, 208, 0);
+    cursor:pointer;
+}
+
+#iImportant:hover{
+    color:rgb(255, 187, 0);
+}
+form{
+    background-color:rgb(200,200,200,.5);
+    border-radius: 10px;
+    width:35vw;
+}
+form div{
+    padding:1rem;
+    
+}
+/*main */
+body{
+    height:100vh;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size:cover;
+}
+/*header*/
+header{
+    color:white;
+}
+.container-fluid-header{
+    display:flex;
+    width:90%;
+    justify-content:space-between;
+    padding:1rem;
+}
+#btnClear{
+    background-color:rgb(11, 186, 203);
+    border:solid 1px black;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+#btnAdd{
+    background-color:rgb(11, 186, 203);
+    border:solid 1px black;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+#btnSave{
+    background-color:rgb(11, 186, 203);
+    border:solid 1px black;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+/*task*/
+.task{
+    border: 1px solid gray;
+    background-color: rgb(0, 0, 0, .5) ;
+    border-color: white;
+    border-radius: 35px;
+    padding:1rem;
+    margin:1rem;
+    border-radius:5px;
+}
+.taskInfo{
+    text-align:left;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.task label{
+    display:block;
+    padding:5px;
+}
+.task label i{
+    margin-right: 1rem;
+    padding: 0;
+    width:2rem;
+    text-align:right;
+}
+.task .title{
+    display: flex;
+    justify-content:space-between;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+.graffiti{
+    align-items: center;
+}
+h3{
+    color:white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}

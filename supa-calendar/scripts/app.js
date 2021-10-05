@@ -1,6 +1,7 @@
+let serverUrl= "https://fsdiapi.azurewebsites.net/";
 let important=true;
 let form=false;
-let serverUrl= "https://fsdiapi.azurewebsites.net/";
+let task=true;
 function toggleImportant(){
     console.log("clicked");
     if(important){
@@ -21,6 +22,9 @@ function toggleForm(){
         $("#btnAdd").text("Hide the form");
         form=true;
     }
+}
+function toggleTask(){
+    $(".taskInfo").toggle();
 }
 function save(){
     console.log("Saving task");
@@ -55,13 +59,18 @@ function save(){
 function displayTask(task){
     //display obj information
     syntax=`
-    <div>
-        <h6>${task.title}</h6>
-        <label>${task.location}</lable>
-        <label>${task.collaborator}</label>
-        <label>${task.description}</label>
-        <label>${task.priority}</label>
-        <label>${task.date}</label>
+    <div class="task">
+        <div class="title">
+            <h6>${task.title}</h6>
+            <button id="minTask" onclick="toggleTask();"><i id="minTask" class="fas fa-window-minimize"></i></button>
+        </div>
+        <div class="taskInfo">
+            <label><i class="fas fa-thumbtack"></i>${task.location}</lable>
+            <label><i class="fas fa-users"></i>${task.collaborator}</label>
+            <label><i class="fas fa-pencil-alt"></i>${task.description}</label>
+            <label><i class="fas fa-exclamation"></i>${task.priority}</label>
+            <label><i class="fas fa-calendar-day"></i>${task.date}</label>
+        </div>
     </div>`;
     $(".pending-tasks").append(syntax);
 }
@@ -72,7 +81,7 @@ function getTask(){
         success:function(res){
             let t=JSON.parse(res);
             for(let i=0;i<t.length;i++){
-                if(t[i].name==="Samantha"){
+                if(t[i].name==="Jake"){
                     console.log(t[i]);
                     displayTask(t[i]);
                 }
@@ -90,6 +99,21 @@ function clearForm(){
     $("#txtCollaborator").val("");
     $("#txtDescription").val("");
 }
+function clearTaskAll(){
+    console.log("Button pressed");
+    $.ajax({
+        type:"DELETE",
+        url: serverUrl + "api/tasks/clear/Jake",
+        success:function(res){
+            let t = JSON.parse(res);
+            console.log("All the tasks have been cleared",t);
+            location.reload(true);
+        },
+        error: function(err){
+            console.log("Something went wrong",err);
+        }
+    });
+}
 function init(){
     console.log("Calendar System");
     $("form").hide();
@@ -98,6 +122,7 @@ function init(){
     $("#btnAdd").click(toggleForm);
     $("#iImportant").click(toggleImportant);
     $("#btnSave").click(save);
+    $("#btnClear").click(clearTaskAll);
 }
 
 window.onload=init;
